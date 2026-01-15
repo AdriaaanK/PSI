@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moje Portfolio - Szablon Lekcyjny</title>
+    <style>
+        :root {
+            --bg-color: #1f1d1d;
+            --card-bg: #8a3535;
+            --primary: #eb1313;
+            --secondary: #e7ef0c;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Comic-Sans';
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: bold; font-size: 1.2rem; color: var(--primary); }
+
+        /* SEKCJA POWITANIE */
+        .hero {
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .avatar-placeholder {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            margin: 0 auto 30px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+        }
+
+        h1 { font-size: 3rem; margin-bottom: 10px; }
+        .subtitle { color: var(--primary); font-size: 1.2rem; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; }
+        .bio { max-width: 600px; margin: 0 auto; color: var(--text-muted); }
+
+        /* SEKCJA KART (GRID) */
+        .my-interests { padding: 60px 0; }
+        .section-header { margin-bottom: 40px; }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 4px solid var(--primary);
+            transition: transform 0.3s;
+        }
+        
+        .card:hover { transform: translateY(-5px); border-left-color: var(--secondary); }
+        .card h3 { margin-bottom: 10px; color: var(--text-main); }
+        .card p { font-size: 0.9rem; color: var(--text-muted); }
+
+        /* STOPKA */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Responsywność */
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Portfolio: Adrian Krzoski</div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="avatar-placeholder">
+                TY
+            </div>
+
+            <div class="subtitle">Sparky in training</div>
+            <h1>Czołem, jestem <span style="color: var(--secondary)">Adrian</span></h1>
+            
+            <p class="bio">
+                Jestem aktywnym uczniem SCI oraz pasjonatą elektryki
+            </p>
+        </div>
+    </section>
+
+    <section class="my-interests">
+        <div class="container">
+            <div class="section-header">
+                <h2>Czym się zajmuję?</h2>
+                <p style="color: var(--text-muted)">Moje hobby i umiejętności</p>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>Hobby</h3>
+                    <p>Historia oraz polityka</p>
+                </div>
+
+                <div class="card">
+                    <h3>Ulubiony Język</h3>
+                    <p>C++</p>
+                </div>
+
+                <div class="card">
+                    <h3>Cel na przyszłość</h3>
+                    <p>Otworzenie działalności gospodarczej działającej na terenie województwa zachodnipomorskiego osadzonej w branży IT zajmującej się instalacją systemami monitoringu lokalnego, systemami alarmowymi oraz kompleksowymi instalacjami z dziedzny automatyki przemysłowej</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Projekt strony wykonany przez: <strong>Adrian Krzoski</strong></p>
+        </div>
+    </footer>
+
+</body>
+</html>
